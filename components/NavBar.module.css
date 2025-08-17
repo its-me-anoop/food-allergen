@@ -5,6 +5,7 @@
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .brand {
@@ -24,6 +25,11 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #e0e0e0;
 }
 
 .logout {
@@ -33,4 +39,30 @@
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.logout:hover {
+  background-color: #45a049;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .logout {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
 }
